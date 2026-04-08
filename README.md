@@ -20,6 +20,14 @@ conda install -c conda-forge rdkit numpy scipy gemmi
 pip install meeko
 ```
 
+Проверено на следующих версиях:
+- Python 3.11.15
+- RDKit 2026.03.1
+- Meeko 0.7.1
+- NumPy 2.4.3
+- SciPy 1.17.1
+- Gemmi 0.7.5
+
 ## Входные данные
 
 В папке `raw_data/` должны быть файлы:
@@ -43,6 +51,17 @@ python ligands_preparation.py --smi raw_data/example.smi
 # SDF и SMILES
 python ligands_preparation.py --sdf raw_data/example.sdf --smi raw_data/example.smi
 ```
+
+### Параметры командной строки
+
+- `--sdf <path>`  
+  Путь к входному SDF‑файлу, содержащему структуры лигандов.
+
+- `--smi <path>`  
+  Путь к входному файлу SMILES (`.smi`), где каждая строка содержит одну SMILES‑запись молекулы.
+
+Вы можете передать либо только `--sdf`, либо только `--smi`, либо оба параметра одновременно.  
+Замените `path/to/file.sdf` и `path/to/file.smi` на реальные пути к вашим файлам (например, `raw_data/example.sdf`).
 
 PDBQT-файлы сохраняются в:
 
